@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color:#00d0ff;
+}
+.hill{
+    background-image: url("../images/hill.png");
+    width: 100%;
+    height: 400px;
+    position: absolute;
+    bottom: 0;
+    animation-name: hillsrunning;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+}
+.sun{
+    position: absolute;
+    top:150px;
+    left: 100px;
+    animation-name: sunround;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+}
+.sun-img{
+    height: 100px;
+    width: 100px;
+}
+.plane{
+    position: absolute;
+    top: 150px;
+    left: 500px;
+    animation-name: planerunning;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+.plane-img{
+    height: 100px;
+    width: 200px;
+}
+@keyframes hillsrunning {
+    0% {
+        background-position-x: 0px;
+    }
+    100% {
+        background-position-x : -4000px;
+    }
+}
+
+@keyframes sunround {
+ 0%{
+     transform: rotate(0deg);
+ }
+ 100%{
+     transform: rotate(360deg);
+ }   
+}
+
+@keyframes planerunning {
+    0%{
+       top:0px;
+    }
+    30%{
+    top: 50px;
+    }
+    70%{
+        top:0px;
+    }
+    100%{
+        top: 40px;
+    }
+}
